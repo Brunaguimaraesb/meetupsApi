@@ -15,6 +15,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     RegistrationRepository repository;
 
     public RegistrationServiceImpl(RegistrationRepository repository) {
+
         this.repository = repository;
     }
 
@@ -28,6 +29,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     @Override
     public Optional<Registration> getRegistrationById(Integer id) {
+
         return this.repository.findById(id);
     }
 

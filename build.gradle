@@ -2,6 +2,8 @@ plugins {
 	id 'org.springframework.boot' version '2.6.6'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id "com.microsoft.azure.azurewebapp" version "1.2.0"
+
 }
 
 group = 'com.womakerscode.microservicemeetup'
@@ -44,4 +46,11 @@ dependencyManagement {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+
+azurewebapp {
+	resourceGroup = 'meetups'
+	appName = 'servico-agendamento-meetups-brunag'
+
 }

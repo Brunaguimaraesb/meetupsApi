@@ -18,21 +18,25 @@ public class MeetupServiceImpl implements MeetupService {
     private MeetupRepository repository;
 
     public MeetupServiceImpl(MeetupRepository repository) {
+
         this.repository = repository;
     }
 
     @Override
     public Meetup save(Meetup meetup) {
+
         return repository.save(meetup);
     }
 
     @Override
     public Optional<Meetup> getById(Integer id) {
+
         return repository.findById(id);
     }
 
     @Override
     public Meetup update(Meetup loan) {
+
         return repository.save(loan);
     }
 
